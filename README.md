@@ -1,4 +1,4 @@
-<h1>Calender for iOS in Swift 4</h1>
+<h1>Calendar for iOS in Swift 4</h1>
  
 This is the sourcecode for the app in my tutorial on Youtube https://youtu.be/srJj8U5d5ok
 <br>

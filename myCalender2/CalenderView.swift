@@ -89,6 +89,12 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         todaysDate = Calendar.current.component(.day, from: Date())
         firstWeekDayOfMonth=getFirstWeekDay()
         
+        //for leap years, make february month of 29 days
+        if currentMonthIndex == 2 && currentYear % 4 == 0 {
+            numOfDaysInMonth[currentMonthIndex-1] = 29
+        }
+        //end leap year
+        
         presentMonthIndex=currentMonthIndex
         presentYear=currentYear
         
@@ -159,6 +165,16 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     func didChangeMonth(monthIndex: Int, year: Int) {
         currentMonthIndex=monthIndex+1
         currentYear = year
+        
+        //for leap year, make february month of 29 days
+        if monthIndex == 1 {
+            if currentYear % 4 == 0 {
+                numOfDaysInMonth[monthIndex] = 29
+            } else {
+                numOfDaysInMonth[monthIndex] = 28
+            }
+        }
+        //end leap year
         
         firstWeekDayOfMonth=getFirstWeekDay()
         

@@ -93,7 +93,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         if currentMonthIndex == 2 && currentYear % 4 == 0 {
             numOfDaysInMonth[currentMonthIndex-1] = 29
         }
-        //end leap year
+        //end
         
         presentMonthIndex=currentMonthIndex
         presentYear=currentYear
@@ -174,7 +174,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
                 numOfDaysInMonth[monthIndex] = 28
             }
         }
-        //end leap year
+        //end
         
         firstWeekDayOfMonth=getFirstWeekDay()
         
@@ -221,7 +221,6 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         let myCollectionView=UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-//        myCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         myCollectionView.showsHorizontalScrollIndicator = false
         myCollectionView.translatesAutoresizingMaskIntoConstraints=false
         myCollectionView.backgroundColor=UIColor.clear

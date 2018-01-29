@@ -159,7 +159,8 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     
     func getFirstWeekDay() -> Int {
         let day = ("\(currentYear)-\(currentMonthIndex)-01".date?.firstDayOfTheMonth.weekday)!
-        return day == 7 ? 1 : day
+        //return day == 7 ? 1 : day
+        return day
     }
     
     func didChangeMonth(monthIndex: Int, year: Int) {

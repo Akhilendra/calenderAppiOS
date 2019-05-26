@@ -5,6 +5,7 @@ This is the sourcecode for the app in my tutorial on Youtube https://youtu.be/sr
 It can be used as a date picker in ios apps. You are free to use it in your projects.
 
 If you want to start the weekday from Monday rather than Sunday as in this project, below are the changes you need to make:
+
 Step 1. In WeekdaysView.swift file, replace daysArr with following:
 
     var daysArr = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
